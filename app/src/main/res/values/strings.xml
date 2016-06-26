@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">androidTodo</string>
     <string name="add">Add</string>
+    <string name="add_item">Add a ToDo item here</string>
 </resources>
