@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:text="@string/add"
         android:id="@+id/submitButton"
+        android:onClick="onSubmitItem"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -34,7 +35,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/lvItems"
         android:layout_alignParentTop="true"
-        android:layout_above="@+id/todoSubmitText"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_above="@+id/submitButton"
+        android:layout_alignRight="@+id/submitButton"
+        android:layout_alignEnd="@+id/submitButton" />
 </RelativeLayout>
