@@ -3,6 +3,7 @@ package com.example.clarkhinchcliff.androidtodo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -25,6 +26,15 @@ public class MainActivity extends AppCompatActivity {
         lvItems = (ListView) findViewById(R.id.lvItems);
         lvItems.setAdapter(toDoAdapter);
         todoSubmitText = (EditText) findViewById(R.id.todoSubmitText);
+        lvItems.setOnItemLongClickListener(
+                new AdapterView.OnItemLongClickListener() {
+                    @Override
+                    public boolean onItemLongClick( AdapterView<?> adapter, View item, int pos, long id){
+                        todoItems.remove(pos);
+                        toDoAdapter.notifyDataSetChanged();
+                        return true;
+                    }
+        });
     }
 
     public void populateArrayItems() {
